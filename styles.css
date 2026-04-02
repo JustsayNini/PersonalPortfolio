@@ -308,6 +308,13 @@ nav a:hover{
     border: hidden;
     border-radius: 6px;
     color: #651313;
+    animation: funfacts1 3s 1s infinite backwards ease;
+}
+
+@keyframes funfacts1 {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(20px);}
+    100%{transform: translateY(0px);}
 }
 
 .fun-facts-container .fun-fact-2{
@@ -319,6 +326,13 @@ nav a:hover{
     border: hidden;
     border-radius: 6px;
     color: #b33737;
+    animation: funfacts2 3s 2s infinite backwards ease;
+}
+
+@keyframes funfacts2 {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(20px);}
+    100%{transform: translateY(0px);}
 }
 
 #section-4{
@@ -355,7 +369,13 @@ nav a:hover{
     width:40%;
     border: 8px #220808 solid;
     border-radius: 20px;
+    transition: transform 0.3s ease;
 }
+
+.featuring-img:hover{
+    transform: translateY(-10px);
+}
+
 
 .featuring-img img{
     width: 400px;
@@ -373,27 +393,29 @@ nav a:hover{
     font-family: Nunito;
     font-size: 1.1rem;
     color: #220707;
+    text-align: center;
 }
 
 #contactme-main {
     width: 100%;
-    height: 80vh;
-    background-image: url('img/_\ \(2\).jpeg');
+    height: 100vh;
+    background-image: url('');
     background-repeat: no-repeat;
     background-size:cover;
-    opacity: 0.4;
+    
     
 }
 
-.contactme-div h2{
+#contactme-main h2{
     color: #C28E8E;
     font-family: Tenor Sans;
     font-size: 3rem;
+    text-align: center;
 }
 
 .contactme-div{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -403,7 +425,7 @@ nav a:hover{
 .contactme-form{
     height: fit-content;
     width: fit-content;
-    background-color: #C28E8E;
+    background-color: #4A0E0E;
     border: hidden;
     border-radius: 10px;
     padding:2%
@@ -412,11 +434,16 @@ nav a:hover{
 .contact-input{
     margin: 1%;
     padding:1%;
-    background-color:#eac3c3;
+    background-color:#902a2a;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease;
     
+}
+
+.contact-input:hover{
+    transform: translateY(-10px);
 }
 
 .contact-input label{
@@ -431,15 +458,92 @@ nav a:hover{
  border-radius: 10px;
  padding: 3%;
  font-family: Nunito;
- color: #420b0b;
+ color: #230808;
  text-align: center;
- background-color: #fdf7f7;
+ background-color: #c14848;
+ transition: background-color 0.3s ease;
 }
 
-.contact-input input[type="text"]:focus{
-    border: #420b0b;
+input[type="text"]::placeholder{
+    color:#1f070773;
 }
 
-.contact-input button{
-    
+input[type="text"]:hover{
+    background-color: #C28E8E;
+}
+
+input[type="email"]::placeholder{
+    color:#1f070773;
+}
+
+input[type="email"]:hover{
+    background-color: #C28E8E;
+}
+
+textarea::placeholder{
+    color:#1f070773;
+}
+
+textarea:hover{
+    background-color: #C28E8E;
+}
+
+
+
+.send-button{
+    background-color: #721b1b;
+    border: hidden;
+    border-radius: 10px;
+    padding: 3%;
+    margin-top: 1%;
+    margin-left: 35%;
+    margin-right: auto;
+    width:30%;
+    color: #1f0707;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover{
+    background-color: #b33737;
+}
+
+.contactme-social-media{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 30%;
+    height: auto;
+
+}
+
+.contactme-social-media a{
+    text-decoration: none;
+}
+
+.contactme-social-media a img{
+    width: 180%;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.contactme-social-media a img:hover{
+    transform: translateY(-10px);
+}
+
+footer {
+    background-color: #4A0E0E;
+    width: 100%;
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    font-family: Nunito;
+    font-size: 1rem;
+    color: #220707;
+    text-align: center; 
 }
